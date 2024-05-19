@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2{
+    margin-left: 6.5%;
+}
+header h2:hover {
+    color: #08d708;
+}
+.logo{
+    padding: 6px;
+    text-align: center;
+    border-radius: 25%;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,239,252,1) 100%);
+
+}
+.logo h1 {
+    font-size: 1.5em;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin-right: 10px;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links li:first-child {
+    margin-left: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.images {
+    margin-bottom: 16px;
+}
+
+.images h2 {
+    color: #333; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.image-container img:hover {
+    transform: scale(1.05); 
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #343a40;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.hover-box:hover {
+    transform: translateY(-5px);
+}
+.hover-box {
+    background-color: #737171;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px; 
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    padding: 16px;
+    background-color: #343a40; 
+    color: #fff;
+}
