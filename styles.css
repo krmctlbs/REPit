@@ -21,12 +21,12 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 header h2 {
-    margin-left: 6.5%;
     flex: 1;
-    text-align: center;
+    margin: 10px 0;
 }
 
 header h2:hover {
@@ -48,17 +48,18 @@ header h2:hover {
     list-style-type: none;
     padding: 0;
     display: flex;
-    flex: 1;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin: 10px 0;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
+    padding: 10px 20px;
     transition: color 0.3s ease;
 }
 
@@ -73,12 +74,6 @@ main {
 
 .images {
     margin-bottom: 16px;
-}
-
-.images h2 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .image-container {
@@ -111,10 +106,6 @@ section h2 {
     margin-bottom: 20px;
 }
 
-.hover-box:hover {
-    transform: translateY(-5px);
-}
-
 .hover-box {
     background-color: #737171;
     padding: 20px;
@@ -124,6 +115,12 @@ section h2 {
     display: inline-block;
     vertical-align: top;
     margin: 0 10px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.hover-box:hover {
+    transform: translateY(-5px);
 }
 
 footer {
@@ -139,21 +136,20 @@ footer {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    .logo, .nav-links {
+        margin-bottom: 10px;
     }
 
     .nav-links {
-        justify-content: center;
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav-links li {
-        margin: 10px 0;
-    }
-
-    header h2 {
-        margin: 10px 0;
-        text-align: center;
+        margin: 5px 0;
     }
 
     .image-container img {
@@ -161,7 +157,7 @@ footer {
     }
 
     .hover-box {
-        width: calc(100% - 40px);
+        width: 100%;
         margin: 10px 0;
     }
 }
@@ -199,7 +195,7 @@ footer {
     }
 
     .hover-box {
-        width: calc(100% - 20px);
+        width: 100%;
         margin: 5px 0;
         padding: 15px;
     }
