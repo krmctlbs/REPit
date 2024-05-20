@@ -1,34 +1,3 @@
-@media (max-width: 768px) {
-    body {
-      font-size: 16px;
-    }
-  
-    header {
-      padding: 10px;
-    }
-  
-    header h2 {
-      font-size: 1.2em;
-    }
-  
-   .nav-links {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-   .nav-links li {
-      margin: 10px 0;
-    }
-  
-   .image-container img {
-      max-width: 90%;
-    }
-  
-   .hover-box {
-      padding: 10px;
-      font-size: 0.9em;
-    }
-  }
 * {
     box-sizing: border-box;
     margin: 0;
@@ -37,8 +6,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa; 
-    color: #333; 
+    background-color: #f8f9fa;
+    color: #333;
     line-height: 1.6;
 }
 
@@ -47,48 +16,50 @@ header {
     color: #fff;
     padding: 20px;
     margin-bottom: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-header h2{
+header h2 {
     margin-left: 6.5%;
+    flex: 1;
+    text-align: center;
 }
+
 header h2:hover {
     color: #08d708;
 }
-.logo{
+
+.logo {
     padding: 6px;
     text-align: center;
     border-radius: 25%;
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,239,252,1) 100%);
-
 }
+
 .logo h1 {
     font-size: 1.5em;
 }
 
 .nav-links {
     list-style-type: none;
-    margin-right: 10px;
     padding: 0;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .nav-links li {
-    display: inline;
     margin-left: 20px;
-}
-
-.nav-links li:first-child {
-    margin-left: 0;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -105,7 +76,7 @@ main {
 }
 
 .images h2 {
-    color: #333; 
+    color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -121,13 +92,13 @@ main {
     max-width: 300px;
     height: auto;
     margin: 10px;
-    border-radius: 8px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .image-container img:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 section {
@@ -139,9 +110,11 @@ section h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
 }
+
 .hover-box:hover {
     transform: translateY(-5px);
 }
+
 .hover-box {
     background-color: #737171;
     padding: 20px;
@@ -150,13 +123,88 @@ section h2 {
     transition: transform 0.3s ease;
     display: inline-block;
     vertical-align: top;
-    margin: 0 10px; 
+    margin: 0 10px;
 }
 
 footer {
     text-align: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 16px;
-    background-color: #343a40; 
+    background-color: #343a40;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    header h2 {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .image-container img {
+        max-width: 90%;
+    }
+
+    .hover-box {
+        width: calc(100% - 40px);
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo h1 {
+        font-size: 1.2em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        margin: 5px;
+    }
+
+    .hover-box {
+        width: calc(100% - 20px);
+        margin: 5px 0;
+        padding: 15px;
+    }
+
+    footer {
+        padding: 10px;
+    }
 }
